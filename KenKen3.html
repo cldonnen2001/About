@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Christine Godfrey | A KenKen</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta   
+            name="description"
+            content="KenKen3. Try it out!"
+        />
+        <link rel="stylesheet" href="KenKen.css"/>
+    </head> 
+    <header>    
+        KenKen’s rules are straightforward:
+        <ol>                                        <!-- <ol> and <li> will create a numbered list-->
+            <li>Fill in each square cell in the puzzle with a number between 1 and 4.</li>
+            <li>Use each number exactly once in each row and each column.</li>
+            <li>The numbers in each “Cage” (indicated by the heavy lines) must combine, in 
+                <br>any order, to produce the cage’s target number using the indicated math operation. 
+                <br>Numbers may be repeated within a cage as long as rule 2 isn’t violated.</li>
+            <li>Each puzzle can be solved completely using only logical deduction.</li>
+        </ol>
+    </header>       
+
+    <body class="KenKen3">
+
+        <main>
+        <form>
+            <input class="resetButton" type="reset" value="Reset Game">
+            <div class="grid">      <!--divide sign  &#xF7  -->    
+                <div id="box1c" class="grid-item">
+                    <span class="prompt">5+</span><input class="answer" contenteditable=""> <!-- contenteditable=""  makes editable for game-->
+                </div >
+                <div id="box2c" class="grid-item">
+                    <span class="prompt"></span><input class="answer" contenteditable="">              
+                </div>
+                <div id="box3c" class="grid-item">
+                    <span class="prompt">8x</span><input class="answer" contenteditable="">               
+                </div>
+                <div id="box4c" class="grid-item">
+                    <span class="prompt"></span><input class="answer" contenteditable="">             
+                </div>
+                <div id="box5c" class="grid-item">
+                    <span class="prompt">2&#xF7</span><input class="answer" contenteditable="">                
+                </div>
+                <div id="box6c" class="grid-item">
+                    <span class="prompt">2-</span><input class="answer" contenteditable="">          
+                </div>
+                <div id="box7c" class="grid-item">
+                    <span class="prompt">9+</span><input class="answer" contenteditable="">              
+                </div>
+                <div id="box8c" class="grid-item">
+                    <span class="prompt"></span><input class="answer" contenteditable="">               
+                </div>
+                <div id="box9c" class="grid-item">
+                    <span class="prompt"></span><input class="answer" contenteditable="">               
+                </div>
+                <div id="box10c" class="grid-item">
+                    <span class="prompt"></span><input class="answer" contenteditable="">                   
+                </div>
+                <div id="box11c" class="grid-item">
+                    <span class="prompt"></span><input class="answer" contenteditable="">                   
+                </div>
+                <div id="box12c" class="grid-item">
+                    <span class="prompt">2-</span><input class="answer" contenteditable="">            
+                </div>
+                <div id="box13c" class="grid-item">
+                    <span class="prompt">4x</span><input class="answer" contenteditable="">                   
+                </div>
+                <div id="box14c" class="grid-item">
+                    <span class="prompt"></span><input class="answer" contenteditable="">              
+                </div>
+                <div id="box15c" class="grid-item">
+                    <span class="prompt"></span><input class="answer" contenteditable="">             
+                </div>
+                <div id="box16c" class="grid-item">
+                    <span class="prompt"></span><input class="answer" contenteditable="">               
+                </div>
+            </div>
+        </form>
+        </main>
+    </body>
+</html>

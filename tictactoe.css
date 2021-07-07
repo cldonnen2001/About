@@ -1,0 +1,62 @@
+:root{
+    --purple: #2d0235;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: var(--purple);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #e0d3b2;
+}
+
+*{
+    box-sizing: border-box;     /*width/height will be included */
+}
+
+h1{
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.container{
+    padding: 40px;
+    height: 100vh; /*vh = view height, takes up 100% of screen*/
+    display: flex;    /*center of screen*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /*this put the title and "restart" button stacked in columns and not side by side*/
+}
+
+#gameBoard{
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    background-color:#a0b2c4;
+}
+
+.box{
+    height: 150px;
+    width: 150px;
+    display: flex;  /*center*/
+    justify-content: center;
+    align-items: center;
+    color: var(--purple);
+    font-size: 80px;
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--purple);
+    color: whitesmoke;
+    border-color: var(--purple);
+    font-size: 16px;
+    transition: 200ms transform;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}

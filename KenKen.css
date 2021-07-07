@@ -1,0 +1,139 @@
+*{                              /*everything selector */
+    box-sizing: border-box;     /*makes so size of elements are determined by padding and margin and actual size of content*/
+}
+
+img {
+    min-width: auto;
+    max-width: min-content;
+}
+
+body{
+    width: fit-content;
+    height: fit-content;
+    margin: 2rem auto;          /*values top, right bottom left  or two values x and Y  REM= relative unit based on font size 3em is top and bottom auto will center both sides, right and left*/
+    padding: 0;
+    background-color: rgb(125, 153, 206);
+}
+.KenKen1{
+    background-color: rgb(180, 205, 219)
+}
+.KenKen2{
+    background-color: rgb(223, 223, 139)
+}
+.KenKen3{
+    background-color: rgb(149, 182, 166)
+}
+
+.resetButton{
+    padding: 10px 20px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    color:#333;
+    border-color: rgb(87, 86, 86);
+    background-color: rgb(143, 159, 175);
+    font-size: 12px;
+    font-weight: bold;
+    transition: 200ms transform;
+}
+.resetButton:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.prompt{                                    /*need this for the input part*/
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.answer{                                    /*makes game playable/editable*/
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    background-color: rgb(143, 159, 175);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /*same width fr is fraction unit*/
+    grid-template-rows: repeat(4, 1fr);     /*same height fr is fraction unit*/
+    width: 500px;
+    height: 500px;
+    font-size: 1.5rem;
+
+}
+
+.grid-item{
+    position: relative;                     /* .prompt tells posiiton of the number, but this grid-item needs to be relative or the numbers will not be in the grid, need this for input*/
+    display: flex;                          /*default flex is row*/
+    justify-content: center;                /*want anwser center*/
+    align-items: center;
+    background-color: rgb(165, 170, 175); /*background of grid*/
+
+}
+
+#box1, #box2, #box3, #box4, #box5, #box6, #box7, #box8, #box9, #box12, #box13, #box14, #box15,
+#box1a, #box2a,#box3a, #box4a, #box5a, #box6a, #box7a, #box8a, #box11a, #box13a, #box14a, #box16a,
+#box1c, #box2c,#box3c, #box4c, #box5c, #box6c, #box7c, #box12c, #box13c, #box14c
+{
+    border-top: 3px solid black;
+}
+
+#box1, #box2, #box3, #box4, #box5, #box8, #box9, #box10, #box11, #box13, #box14, #box15, #box16,
+#box1a, #box2a, #box3a, #box4a, #box7a, #box9a, #box10a, #box1a, #box13a, #box14a, #box15a, #box16a,
+#box1c, #box2c, #box3c, #box8c, #box9c, #box10c, #box13c, #box14c, #box15c, #box16c
+{
+    border-bottom: 3px solid black;
+}
+
+#box1, #box3, #box5, #box7, #box9, #box10, #box11, #box12, #box13, #box15,
+#box1a, #box3a, #box5a, #box6a, #box7a, #box8a, #box9a, #box10a, #box11a, #box12a, #box13a, #box15a, #box16a,
+#box1c, #box3c, #box5c, #box6c, #box7c, #box8c, #box9c, #box10c, #box11c, #box12c, #box13c, #box15c, #box16c
+{
+    border-left: 3px solid black;
+}
+
+#box2, #box4, #box6, #box8, #box9, #box10, #box11, #box12, #box14, #box16,
+#box2a, #box4a, #box5a, #box6a, #box7a, #box8a, #box9a, #box10a, #box11a, #box12a, #box14a, #box15a, #box16a,
+#box2c, #box4c, #box5c, #box6c, #box7c, #box8c, #box9c, #box10c, #box11c, #box12c, #box14c, #box15c, #box16c
+{
+    border-right: 3px solid black;
+}
+
+#box1, #box3, #box5, #box7, #box13, #box15,
+#box1a, #box3a, #box5, #box7, #box13a,
+#box1c, #box3c, #box5, #box13c
+{
+    border-right: 2px solid rgb(209, 199, 199);
+}
+
+#box6, #box7, #box12,
+#box5a, #box6a, #box8a, #box11a,
+#box4c, #box5c, #box6c, #box7c, #box11c, #box12c
+{
+    border-bottom: 2px solid rgb(209, 199, 199);
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    color: #f1f1f1;
+}
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+   .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+}
+
+@media (min-width: 500px) {
+    html {
+        font-size: 16px;
+    }   
+   }

@@ -1,0 +1,136 @@
+*{                              /*everything selector */
+    box-sizing: border-box;     /*makes so size of elements are determined by padding and margin and actual size of content*/
+}
+
+body{
+    width: fit-content;
+    height: fit-content;
+    margin: 3rem auto;          /*values top, right bottom left  or two values x and Y  REM= relative unit based on font size 3em is top and bottom auto will center both sides, right and left*/
+    padding: 0;
+    background-color: no-repeat;
+    font-family: 'Libre Baskerville', serif; /*use the first font, if not able to use the second font*/
+}
+
+/*css grid  - similiar to flex box, ability to align items*/
+.containerC{
+    display: grid;
+    grid-template-columns: 1fr; /* want container to use grid than use temmplate columns using 1 fractional unit (1fr is 100 %, end-to end), layout is considered to have columns*/
+}
+
+/*NAV BAR styles */
+.nav-wrapper {
+    display: flex;  /* moves left-side and right-side next to each other*/
+    justify-content: space-between;  /*justifies contact by using all of the open space between - so from one side to the other*/
+    padding: 38px;   /*padding  add space around the text/box */
+}
+
+ /* working down left-side "tree" to format */
+.left-side {
+    display: flex; /* moves "Home" and "About" next to each other*/
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;  /*put space between "Home" and "About" */
+    font-size: 0.9em; 
+    text-transform: uppercase;/*put letters all upper case for "Home" and "About" regardless of style in the .html*/
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s; /* half a second*/
+}
+
+.nav-link-wrapper a {  /* inside nav-link-wrapper grab the a link */
+    color: #6e5555;
+    text-decoration: none;
+    transition: color 0.5s; /* two animations, color and the underline boarder bottom */
+}
+
+.nav-link-wrapper:hover {  /* the :words is a sudo-state  when hover occurs*/
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {  /* the :words is a sudo-state  this is for link*/
+    color: black;
+}
+
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+.active-nav-link a {
+    color: black !important;
+}
+
+
+
+.carousel{
+    overflow: hidden;
+    max-width: 600px;
+    position: relative;  /*want button inside carousel ontop of slide so use relative, buttons will be absolute*/
+}
+
+.carousel .carousel_item,
+.carousel .carousel_item--hidden{
+    display: none;
+}
+
+/*want images to be responsive*/
+.carousel .carousel_item img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+} 
+
+.carousel .carousel_item--visible{
+    display: block;
+    animation: fadeVisibility 0.5s;
+}
+
+/*actions inside container*/
+.carousel .carousel_actions{
+    display: flex;                      /*display flex justify space between button*/
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.carousel .carousel_actions button{
+    border-radius: 50px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+/*move buttons away from edge of photo*/
+.carousel .carousel_actions button#carousel_button--prev{
+    margin-left: 20px;
+}
+.carousel .carousel_actions button#carousel_button--next{
+    margin-right: 20px;
+}
+
+@keyframes fadeVisibility{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+  

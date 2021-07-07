@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" style="background: linear-gradient(to bottom right, #545461 0%, #d2e3f3 100%)">
+<head>
+    <link rel="stylesheet" href="carousel.css" />
+    <title>Family recipes</title>
+</head>
+
+    <body>
+
+        <div class="containerC">
+            <div class="nav-wrapper">
+                <div class="left-side"> <!--left column div-->
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="index.html">Home</a><!--this is a link in an "a" tag -how you define a hyperlink in html, a href is where the link points too -->
+                    </div> 
+    
+                    <div class="nav-link-wrapper">
+                        <a href="about.html">About</a><!-- -->
+                    </div> 
+    
+                    <!--absolute path goes to an actual webpage:    <a href="https://google.com">Google</a>    -->
+                </div>
+    
+                <div class="right-side">   <!--right column div-->
+                    <div class="brand">
+                        <div>Enjoy these family recipes</div>
+                    </div>
+                </div>
+            </div>
+    
+
+        <div class="carousel">
+            <div class="carousel_item carousel_item--visible">  <!--this item visible means this is what shows on the screen as first item-->
+                <img src="images/recipes/Recipe book.jpg"/>
+            </div>
+
+            <div class="carousel_item">
+                <img src="images/recipes/Faster no Knead Bread.jpg"/>
+            </div>
+
+            <div class="carousel_item">
+                <img src="images/recipes/Scones.jpg"/>
+            </div>
+
+            <div class="carousel_item">
+                <img src="images/recipes/Beef Stroganoff.jpg"/>
+            </div>
+
+            <div class="carousel_item">
+                <img src="images/recipes/Oyster Cracker Snacks.jpg"/>
+            </div>
+
+            <div class="carousel_item">
+                <img src="images/recipes/Shrimp dip.jpg"/>
+            </div>
+
+            <div class="carousel_item">
+                <img src="images/recipes/Lemon bars.jpg"/>
+            </div>
+
+            <div class="carousel_item">
+                <img src="images/recipes/Zimit Kuchen bars.jpg"/>
+            </div>
+
+
+            <div class="carousel_actions">
+                <button id="carousel_button--prev" aria-label="Previous slide"><</button>  <!--if want the word "Previous slide" change the "<""  and remove arial-label-->
+                <button id="carousel_button--next" aria-label="Next slide">></button>      <!--if want the word "Next slide" change the ">" and remove arial-label -->
+            </div>
+        </div>
+
+        <script src="carousel.js"></script>
+    </body>  
+</html>

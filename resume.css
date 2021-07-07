@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  html{
+    height: 100%;
+  }
+  body{
+    min-height: 100%;
+
+  }
+
+/*-- header -- */
+.centerName{
+    text-align: left;
+    color: rgb(65, 64, 64);
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding-bottom: 20px;
+    font-size: 52px;
+    font-weight: bold;
+}
+
+/*-- body -- */
+body{
+    background: #d2e3f3;
+    color: rgb(65, 64, 64);
+    background-repeat: no-repeat;
+    padding: 80px; /* from edge of screen to words*/
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.spaceBeforeLine{  
+    padding-bottom: 10px;/* this is on the full DIV padding space is on bottom of DIV */
+    /*background-color: brown;   /*this will show the whole div*/
+}
+
+    /*-- well - it says it all space between the letters (so up your arrays)-- */
+.letterSpacing{
+letter-spacing: 2px;
+}
+
+
+
+/*-- footer -- */
+#ft {padding: 1em 0 5em 0; font-size: 102%; border-top: 1px solid rgb(128, 124, 124); text-align: center; }
+#ft p { margin-bottom: 0; text-align: center; padding-top: 100px;}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+

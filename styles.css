@@ -1,0 +1,332 @@
+*{                              /*everything selector */
+    box-sizing: border-box;     /*makes so size of elements are determined by padding and margin and actual size of content*/
+}
+
+/*master styles, (grab body)*/
+html, body{
+    min-height: 100vh;  /*vh= viewport height helps get rid of blank space at bottom, carries my back ground down*/
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    width: 100vw;
+}
+
+.index-body {
+      /* background: linear-gradient(to bottom right, #545461 0%, #d2e3f3 100%);*/
+   /* background-repeat: no-repeat;*/
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+
+/*css grid  - similiar to flex box, ability to align items*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr; /* want container to use grid than use temmplate columns using 1 fractional unit (1fr is 100 %, end-to end), layout is considered to have columns*/
+}
+
+/*NAV BAR styles */
+.nav-wrapper {
+    display: flex;  /* moves left-side and right-side next to each other*/
+    justify-content: space-between;  /*justifies contact by using all of the open space between - so from one side to the other*/
+    padding: 38px;   /*padding  add space around the text/box */
+}
+ /* working down left-side "tree" to format */
+.left-side {
+    display: flex; /* moves "Home" and "About" next to each other*/
+}
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;  /*put space between "Home" and "About" */
+    font-size: 0.9em; 
+    text-transform: uppercase;/*put letters all upper case for "Home" and "About" regardless of style in the .html*/
+}
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s; /* half a second*/
+}
+.nav-link-wrapper a {  /* inside nav-link-wrapper grab the a link */
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s; /* two animations, color and the underline boarder bottom */
+}
+.nav-link-wrapper:hover {  /* the :words is a sudo-state  when hover occurs*/
+    border-bottom: 1px solid black;
+}
+.nav-link-wrapper a:hover {  /* the :words is a sudo-state  this is for link*/
+    color: black;
+}
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+.active-nav-link a {
+    color: black !important;
+}
+
+
+/*portfolio styles*/
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*this is going to give each one of the columns (3) their own full sized column*/
+}
+
+.portfolio-item-wrapper {
+    position: relative; /* allows flexibility on how to position each item within, relative necessary to have an element on top*/
+}
+
+.bg-left{
+    background-position: 0% !important;
+}
+.portfolio-img-background {/*style image back ground*/
+    height: auto;
+    min-height: 100px;
+    width: 100%;
+    background-size: cover; /* images not the same size, (contain means show full picture mostly if same size picture)this will make sure cropping so they sit nicely next to each other*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (min-width:720px){  /* rule applies if greater than 720px*/
+    .portfolio-img-background{
+        min-height: 350px;      /*overwrites teh 100px*/
+    }
+}
+
+
+.image-text-wrapper { /* makes text go on top of the other div (photo) but underneath the top image*/
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    /*padding-left: 300px;
+    padding-right: 100px;*/
+}
+.logo-wrapper, .logo-wrapper>a{ /*logo-wrapper>a when item has an extra anchor tag for link*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-wrapper img, .btn {
+    display: block;
+    border-radius: 50%;  /*makes inner image round*/
+    width: 40%;
+    height: 40%;
+    margin-bottom: 20px;
+
+}
+
+.image-text-wrapper .subtitle {
+    transition: 1s;
+    font-weight: 900;  /* font weight the same, if we did not do this the words would cause the overlay photo to move a wee bit*/
+    font-size: small;
+    color: transparent;  /*words on picture are transparent now*/
+}
+/*needs to be more specific with selector - if hover over change work green */
+.image-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color:#B17F0C;   
+}
+/*darken back image when hover over image*/
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+
+/**/
+/*About page styles*/
+.three-column-wrapper{
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.profile-image-wrapper{
+    width: 50%;   /*margin between photo and words when screen gets smaller*/   
+    padding: 1em;
+}
+.profile-content-wrapper{
+    margin: 0 auto;
+}
+.profile-content-wrapper h1{
+    color: rgb(71, 70, 70);
+}
+
+.about-main-footer{
+    background-color: rgba(0, 0, 0, .6);  /*this is black with transparience of 60%*/
+    background-image: url(images/chainMail.jpg);
+    background-size: cover;  /*expands background in this part as wide and as tall as can w/out surprassing the image - cuts off top and bottom , will grow and shrinkas can*/
+    background-blend-mode: multiply;  /*blends the two backgrounds (color and image together*/    
+    padding-top: 25PX;                  /*padding size top/bottom makes thicker chainmail background*/
+    padding-bottom: 25px;
+}
+
+/*background size cover makes sure the image covers the background content, height of containing space*/
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;           /*thickness of chainmail at bottom*/
+    margin: 0 auto;
+   justify-content: space-around; /*space between the buttons*/
+   align-items: center;
+}
+
+
+.btn{
+    display: block;  /*need button to be block so that flex words*/
+    padding: 40;
+}
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(194, 194, 194);
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.modal-body {
+    padding: 10px 15px;
+}
+#overlay {  /*background when not a button is pushed*/
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(119, 112, 112, 0.363);
+    pointer-events: none;
+}
+#overlay.active {  
+    opacity: 1;
+    pointer-events: all;
+}
+
+/*buttons*/
+.containerL{
+    width: 100%;
+    max-width: 100%;
+}
+.containerL .btn{
+    position: relative;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-image: -webkit-linear-gradient(top, #d2e3f3, #545461);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    height: 8px;
+    line-height: 10px;
+    color: #FFFFFF;
+    font-family: Garamond;
+    width: 120px;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 19px;
+    -webkit-box-shadow: 1px 1px 20px 0 #000000;
+    -moz-box-shadow: 1px 1px 20px 0 #000000;
+    box-shadow: 1px 1px 20px 0 #000000;
+    text-shadow: -6px -4px 4px #000000;
+    border: solid #2b4161 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;  
+}
+.containerL .btn:hover{
+    border: solid #215296 1px;
+    background: #1E62D0;
+    background-image: -webkit-linear-gradient(top, #215296, #454f5f);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.dragonStory{
+    background-color: #2b4161;
+    color: rgb(231, 224, 224);
+}
+
+.dragonAuthor{
+    font-size: .75em;
+}
+
+.dragonStory-MCaffrey {
+    margin: 0 auto;
+    padding: 0 .5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.dragonStory-MCaffrey-section{
+    margin:a 1em;
+}
+
+.dragonStory-inline {
+    margin: 0 auto;
+    padding: 0 .5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+  
+
+/*  
+    picture color id: https://html-color-codes.info/colors-from-image/#    ||  to match color of photo  
+    color gradient: https://www.w3schools.com/colors/colors_gradient.asp
+    font style: https://fonts.google.com/    ||  to see the html & css codingto copy click on sytle you want, click on the +
+    button: https://cssbuttoncreator.com/  
+    color pallet: https://colorhunt.co/
+    https://www.youtube.com/watch?v=5bMdjkfvONE
+    https://www.youtube.com/watch?v=kMT54MPz9oE
+*/     
