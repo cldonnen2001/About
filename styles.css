@@ -188,7 +188,9 @@ html, body{
     display: block;  /*need button to be block so that flex words*/
     padding: 40;
 }
-
+#closeButton{
+    padding: 15px;
+  }
 
 *, *::after, *::before {
     box-sizing: border-box;

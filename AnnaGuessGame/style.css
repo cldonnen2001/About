@@ -1,0 +1,99 @@
+*{
+    letter-spacing: 1px;
+}
+
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #5f2d0a;
+    text-align: center;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+  .bg-container::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index:-99;
+    background-image: url("princessBridedownload.jpg");
+    background-size: cover;
+    opacity: 0.4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+}
+
+#clock {   
+    font-size: 40px; 
+    padding: 0px;
+}
+
+#audioButton, #startButton, #stopButton, .restBttn {
+    margin-right: 20px;
+    background-color: saddlebrown;
+    color:white;
+    margin-top: 20px;
+}
+
+#stormnDaCastle {
+    font-size: 22px;
+}
+
+#output3 {
+    font-size: 15px;
+}
+
+#output2 {
+    font-size: 30px;
+}
+
+#yourGuesses {
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+}
+
+#yourGuessesBox {
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    border:5px solid saddlebrown;
+    width: 250px;
+    height: 50px;
+}
+
+.enterGuess, .prevGuesses {
+    size: 50px;
+    margin-right: 20px;
+    
+}
+
+.guessBox {
+    width: 80px;
+    height: 60px;
+    font-size: 40px;
+    border:5px solid saddlebrown;
+    background-color: transparent;
+}
+
+.form2{
+    margin-top: 5%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.form {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 30px;
+    margin: 30px 0;
+}
+
+.guessSubmit {
+    color: #f2f4f7;
+    margin-left: 50px;
+    background-color: saddlebrown;
+}

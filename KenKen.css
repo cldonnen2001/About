@@ -12,16 +12,26 @@ body{
     height: fit-content;
     margin: 2rem auto;          /*values top, right bottom left  or two values x and Y  REM= relative unit based on font size 3em is top and bottom auto will center both sides, right and left*/
     padding: 0;
-    background-color: rgb(125, 153, 206);
+    font-weight: bold;
 }
 .KenKen1{
-    background-color: rgb(180, 205, 219)
+    background-size: cover;
+    background-image: url("images/background/whiteSwirl.jpg");
+    background-color: rgb(179, 200, 240);
+    background-blend-mode: multiply;
 }
+
 .KenKen2{
-    background-color: rgb(223, 223, 139)
+    background-size: cover;
+    background-image: url("images/background/whiteSwirl.jpg");
+    background-color: rgb(243, 243, 169);
+    background-blend-mode: multiply;
 }
 .KenKen3{
-    background-color: rgb(149, 182, 166)
+    background-size: cover;
+    background-image: url("images/background/whiteSwirl.jpg");
+    background-color: rgb(149, 182, 166);
+    background-blend-mode: multiply;
 }
 
 .resetButton{

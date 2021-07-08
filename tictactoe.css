@@ -1,13 +1,19 @@
 :root{
-    --purple: #2d0235;
+    --purple: #230429;
 }
 
 body{
+    min-height: 100vh;  /*vh= viewport height helps get rid of blank space at bottom, carries my back ground down*/
+    height: fit-content;
     margin: 0;
     padding: 0;
+    background-repeat: no-repeat;
+    width: 100vw;
     color: var(--purple);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #e0d3b2;
+    background-size: cover;
+    background-image: url("images/grayCobbleStone.jpg");
+    background-blend-mode: multiply;
 }
 
 *{
@@ -15,7 +21,7 @@ body{
 }
 
 h1{
-    font-size: 45px;
+    font-size: 25px;
     text-transform: uppercase;
 }
 
@@ -60,3 +66,12 @@ button:hover{
     cursor: pointer;
     transform: translateY(-2px);
 }
+
+@media screen and (max-height: 450px) {
+    .container {
+      padding-top: 15px;
+    }
+    .payText {
+      font-size: 18px;
+    }
+  }

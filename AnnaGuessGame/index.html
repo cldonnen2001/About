@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number Game 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ </head>
+
+
+ <body class="bg-container">
+   
+
+          
+    <div class="form2">
+        <div>
+            <h1>I challenge you to a battle of wits.</h1>                <!--Princess bride-->
+        
+        <input id="audioButton" type="button" value=" Click for Directions" onclick="play(); setTimeout(pick, delay);">        <!--setTimeout delays this to post after audio!!-->
+        <audio id="audio"  src="explain.wav" type="audio"></audio>    <!--Princess bride  this is for my audio-->
+            <p id="output3"></p>
+            
+            <!-- <h2> Guess  a  Number  Between  1 - 100</h2>  -->  
+            <h2  id="clock">60</h2>
+        </div>
+
+        <div>
+            <button id="startButton" onclick="startTimer()" >Start</button>
+            <button id="stopButton" onclick="stopTimer()">Stop</button>
+            <button id="resetButton" onclick="resetTimer()" class="restBttn" >Reset</button>
+            <p id="stormnDaCastle">Please start you timer. <br>  Have fun stormin’ da castle. </p>         <!--Princess Bride-->
+        </div>
+    </div>
+    
+    <div class="form3">
+        <p id="output" class="form2"></p>
+        <p id="output2" class="form2"></p>
+    </div>
+        
+    <div class="form">
+        <p class="prevGuesses" > <strong> Previous guesses: </strong> </p>
+        <div id="yourGuessesBox">
+            <div id="yourGuesses"></div>
+        </div>
+    </div>    
+    
+    <div class="form">
+        <label class="enterGuess" for="guessBox"> <strong> Place your guess here: </strong>  </label> 
+        <input type="text" name="guessBox" id="guessBox" class="guessBox"> 
+        <input type="submit" onclick="startNewGame(); startTimer" value="Submit Your Guess" class="guessSubmit" id="submitGuess">  
+    </div>
+</div>       
+    
+    <script src="app.js"></script>
+</body>
+</html>
+
+

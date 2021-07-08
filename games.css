@@ -2,8 +2,12 @@ html,
 body {
   font-family: 'Libre Baskerville', serif;
   background-color: #D4C59E;
-  height: 100%;
-  padding: 20px;
+  min-height: 100vh;  /*vh= viewport height helps get rid of blank space at bottom, carries my back ground down*/
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  width: 100vw;
  }
 
 
