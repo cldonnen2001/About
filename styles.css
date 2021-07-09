@@ -103,8 +103,6 @@ html, body{
     align-items: center;
     height: 100%;
     text-align: center;
-        /*padding-left: 300px;
-    padding-right: 100px;*/
 }
 .logo-wrapper, .logo-wrapper>a{ /*logo-wrapper>a when item has an extra anchor tag for link*/
     display: flex;
@@ -143,15 +141,16 @@ html, body{
 /**/
 /*About page styles*/
 .three-column-wrapper{
+    display: grid;
+    display: flex;
     max-width: 100vw;
     flex-grow: 1;
     margin: 0 auto;
     padding: 0 1.5em;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .profile-image-wrapper{
-    width: 50%;   /*margin between photo and words when screen gets smaller*/   
+    width: 40%;   /*margin between photo and words when screen gets smaller*/   
     padding: 1em;
     flex-grow: 1;
 }
