@@ -14,12 +14,14 @@ body{
     margin: 2rem auto;          /*values top, right bottom left  or two values x and Y  REM= relative unit based on font size 3em is top and bottom auto will center both sides, right and left*/
     padding: 0;
     font-weight: bold;
+    
 }
 .KenKen1{
     background-size: cover;
     background-image: url("images/background/whiteSwirl.jpg");
     background-color: rgb(179, 200, 240);
     background-blend-mode: multiply;
+    
 }
 
 .KenKen2{
@@ -65,6 +67,7 @@ body{
 }
 
 .grid{
+    display: flex;
     display: grid;
     grid-template-columns: repeat(4, 1fr);  /*same width fr is fraction unit*/
     grid-template-rows: repeat(4, 1fr);     /*same height fr is fraction unit*/

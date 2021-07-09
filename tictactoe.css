@@ -1,19 +1,18 @@
 :root{
-    --purple: #230429;
+    --purple: rgb(163, 64, 163);
 }
 
 body{
-    min-height: 100vh;  /*vh= viewport height helps get rid of blank space at bottom, carries my back ground down*/
     height: fit-content;
-    margin: 0;
+    width: fit-content;
+    margin: 2rem auto;          /*values top, right bottom left  or two values x and Y  REM= relative unit based on font size 3em is top and bottom auto will center both sides, right and left*/
     padding: 0;
+    font-weight: bold;
     background-repeat: no-repeat;
-    width: 100vw;
-    color: var(--purple);
+    color:var(--purple);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-size: cover;
-    background-image: url("images/grayCobbleStone.jpg");
-    background-blend-mode: multiply;
+    background-image: url("images/background/yWeave.jpg");
+    display: flex;
 }
 
 *{
@@ -56,7 +55,7 @@ button{
     padding: 10px 20px;
     border-radius: 10px;
     background-color: var(--purple);
-    color: whitesmoke;
+    color:white;
     border-color: var(--purple);
     font-size: 16px;
     transition: 200ms transform;
