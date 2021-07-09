@@ -288,8 +288,8 @@ html, body{
 }
 
 .dragonStory{
-    background-color: #2b4161;
-    color: rgb(231, 224, 224);
+    background-color: #5a6f8f;
+    color: white;
 }
 
 .dragonAuthor{
@@ -304,7 +304,7 @@ html, body{
 }
 
 .dragonStory-MCaffrey-section{
-    margin:a 1em;
+    margin:a 1.2em;
 }
 
 .dragonStory-inline {
@@ -313,7 +313,87 @@ html, body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
+.animation-area {
+    min-height: 100vh;  /*vh= viewport height helps get rid of blank space at bottom, carries my back ground down*/
+    height: fit-content;
+}
+.box-area {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+.box-area li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 25px;
+	height: 25px;
+	background: url(images/background/whiteDragon.jpg);
+	animation: animate 20s linear infinite;
+	bottom: -150px;
+}
+.box-area li:nth-child(1) {
+	left: 86%;
+	width: 90px;
+	height: 90px;
+    background: url(images/background/blueDragonBG.jpg);
+	animation-delay: 0s;
+}
+.box-area li:nth-child(2) {
+	left: 12%;
+	width: 40px;
+	height: 40px;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+}
+.box-area li:nth-child(3) {
+	left: 70%;
+	width: 105px;
+	height: 105px;
+    background: url(images/background/redDragonBG.jpg);
+	animation-delay: 5.5s;
+}
+.box-area li:nth-child(4) {
+	left: 42%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 0s;
+	animation-duration: 15s;
+}
+.box-area li:nth-child(5) {
+	left: 26%;
+	width: 93px;
+	height: 93px;
+    background: url(images/background/goldDragonBG.jpg);
+	animation-delay: 0s;
+}
+.box-area li:nth-child(6) {
+	left: 65%;
+	width: 70px;
+	height: 70px;
+    background: url(images/background/greenDragonBG.jpg);
+	animation-delay: 0s;
+}
+.box-area li:nth-child(7) {
+	left: 15%;
+	width: 110px;
+	height: 110px;
+    background: url(images/background/redDragonBG.jpg);
+	animation-delay: 3.5s;
+}
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
 
 @media screen and (max-height: 450px) {
     .sidenav {
