@@ -125,6 +125,7 @@ html, body{
     font-weight: 900;  /* font weight the same, if we did not do this the words would cause the overlay photo to move a wee bit*/
     font-size: small;
     color: transparent;  /*words on picture are transparent now*/
+    padding-left: .5em;
 }
 /*needs to be more specific with selector - if hover over change work green */
 .image-text-wrapper:hover .subtitle {
@@ -181,7 +182,13 @@ html, body{
     justify-content: space-around; /*space between the buttons*/
     align-items: center;
 }
-
+.coding{
+    font-size: 24px;
+    background-image: url(images/background/yellowWithFlowers.jpg);
+    margin: 0 auto;
+    padding: 0 1.5em;
+    color: rgb(112, 60, 22);
+}
 
 .btn{
     display: block;  /*need button to be block so that flex words*/
@@ -287,25 +294,21 @@ html, body{
 }
 
 .dragonStory{
-    background-color: #5a6f8f;
     color: white;
 }
-
 .dragonAuthor{
     font-size: .75em;
+   
 }
-
 .dragonStory-MCaffrey {
     margin: 0 auto;
     padding: 0 .5em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
 .dragonStory-MCaffrey-section{
     margin:a 1.2em;
 }
-
 .dragonStory-inline {
     margin: 0 auto;
     padding: 0 .5em;
